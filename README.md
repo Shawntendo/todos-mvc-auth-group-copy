@@ -46,3 +46,4 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
   - added color property to user model in models/user.js
   - modified statement in controllers/todos.js that passed color property to todos.ejs along with the retrieved todos list
   - tried to add switch statement to select css files with dark mode options (the switch statement is incomplete and currently breaks the page)
+  - Updated switch statement in .ejs so it works when the user logs in and the correct css will be loaded base on color property

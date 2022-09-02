@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <% switch(color) { case 0: }
+    <% switch(color) { 
+        case 0: %>
+            <link rel="stylesheet" href="css/dark.css">
+            <% break;
+        case 1: %>
+            <link rel="stylesheet" href="css/light-dark.css">
+            <%break;
+        }%> 
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
