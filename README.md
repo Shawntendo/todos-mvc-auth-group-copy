@@ -45,4 +45,4 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 - Edit History : 9-1-2022
   - added color property to user model in models/user.js
   - modified statement in controllers/todos.js that passed color property to todos.ejs along with the retrieved todos list
-  - tried to add switch statement to select css files with dark mode options
+  - tried to add switch statement to select css files with dark mode options (the switch statement is incomplete and currently breaks the page)
