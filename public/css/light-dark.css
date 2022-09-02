@@ -1,0 +1,15 @@
+body{
+  background-color: #A5C9CA;
+  color: #395B64;
+}
+
+h1{
+  color: #395B64;
+}
+.completed{
+  text-decoration: line-through;
+  color: gray;
+}
+.not{
+  text-decoration: underline;
+}

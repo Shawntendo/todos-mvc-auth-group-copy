@@ -1,0 +1,15 @@
+body{
+  background-color: #472D2D;
+  color: #A77979;
+}
+
+h1{
+  color: #A77979;
+}
+.completed{
+  text-decoration: line-through;
+  color: gray;
+}
+.not{
+  text-decoration: underline;
+}
