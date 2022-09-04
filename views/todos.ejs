@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <% switch (color) {
+    <% switch (user.color) {
         case 0: %>
             <link rel="stylesheet" href="css/light-dark.css">
             <% break
@@ -18,10 +18,14 @@
         case 3: %>
             <link rel="stylesheet" href="css/purple.css">
             <% break
+        case 4: %>
+            <link rel="stylesheet" href="css/style.css">
+            <% break
         default: %>
             <link rel="stylesheet" href="css/style.css">
             <% break
     } %> 
+    <script src="https://kit.fontawesome.com/b1a4ee12f5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Todos</h1>
@@ -41,7 +45,15 @@
         <input type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    <section>
+        <a href="/logout">Logout</a>
+    </section>
+
+    <section class="color-change">
+        <span>Color Change</span>
+        <i class="fa-regular fa-circle-question"></i>
+    </section>
+    
 
     <script src="js/main.js"></script>
 </body>

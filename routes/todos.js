@@ -22,4 +22,6 @@ router.put('/markIncomplete', todosController.markIncomplete)
 
 router.delete('/deleteTodo', todosController.deleteTodo)
 
+router.put('/modeReroll', todosController.modeReroll)
+
 module.exports = router

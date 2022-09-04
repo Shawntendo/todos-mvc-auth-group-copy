@@ -52,3 +52,11 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 - 9-2-2022
   - further changes to views/todos.ejs for switch case
   - added more color options (I've got no attachment to the color selection, please change them if you'd like)
+
+- 9-3-2022
+  - Implemented user changing of color scheme with five options. Four more CSS files were created. This involved changes to:
+    - routes/todos.js
+    - controllers/todos.js
+    - models/User.js
+    - main.js
+    - todos.ejs

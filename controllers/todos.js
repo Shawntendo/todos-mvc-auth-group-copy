@@ -1,4 +1,5 @@
 const Todo = require('../models/Todo')
+const User = require('../models/User')
 
 //this is almost the same as without auth
 module.exports = {
@@ -60,6 +61,21 @@ module.exports = {
             await Todo.findOneAndDelete({_id:req.body.todoIdFromJSFile})
             console.log('Deleted Todo')
             res.json('Deleted It')
+        }catch(err){
+            console.log(err)
+        }
+    },
+    modeReroll: async (req, res)=>{
+        let newColor = Math.floor(Math.random() * 5)
+        while(newColor === req.user.color){
+            newColor = Math.floor(Math.random() * 5)
+        }
+        req.user.color = newColor
+        try{
+            await User.findOneAndUpdate({_id:req.user.id},{
+                color:req.user.color
+            })
+            res.json('Changed Color Scheme')
         }catch(err){
             console.log(err)
         }
