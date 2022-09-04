@@ -58,5 +58,5 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
     - routes/todos.js
     - controllers/todos.js
     - models/User.js
-    - main.js
-    - todos.ejs
+    - public/js/main.js
+    - views/todos.ejs
