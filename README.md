@@ -60,3 +60,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
     - models/User.js
     - public/js/main.js
     - views/todos.ejs
+- 9-5-2022
+  - Added optional due dates to todo entry.
+- 9-6-2022
+  - Added an overdue label to todo entries past their date, if they have one.
