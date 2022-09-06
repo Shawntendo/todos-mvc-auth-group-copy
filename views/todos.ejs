@@ -33,7 +33,9 @@
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span>
+                <% if (el.date) { %>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'>Due: <%= el.date.toDateString() %></span>
+                <% } %>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
