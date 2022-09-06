@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <% switch (user.color) {
+        case 0: %>
+            <link rel="stylesheet" href="css/light-dark.css">
+            <% break
+        case 1: %>
+            <link rel="stylesheet" href="css/dark.css">
+            <% break
+        case 2: %>
+            <link rel="stylesheet" href="css/earth-tones.css">
+            <% break
+        case 3: %>
+            <link rel="stylesheet" href="css/purple.css">
+            <% break
+        case 4: %>
+            <link rel="stylesheet" href="css/style.css">
+            <% break
+        default: %>
+            <link rel="stylesheet" href="css/style.css">
+            <% break
+    } %> 
+    <script src="https://kit.fontawesome.com/b1a4ee12f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Todos</h1>
+    <ul>
+    <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <% if (el.date) { %>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'>Due: <%= el.date.toDateString() %></span>
+                    <% if(el.date < new Date()) { %>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'>- Overdue -</span>
+                    <% } %>
+                <% } %>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+
+    <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <label for="date">Due date:</label>
+        <input type="date" id="date" name="date">
+        <input type="submit">
+    </form>
+
+    <section>
+        <a href="/logout">Logout</a>
+    </section>
+
+    <section class="color-change">
+        <span>Color Change</span>
+        <i class="fa-regular fa-circle-question"></i>
+    </section>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
