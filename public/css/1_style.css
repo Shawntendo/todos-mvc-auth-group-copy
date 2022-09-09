@@ -1,0 +1,52 @@
+/*Just a few color and font options for styling the page stuck with most popular size and weight*/
+body{
+    background-color: rgb(4, 4, 83);
+    color: lightblue;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    }
+    
+    /* OPTION #2*/
+    
+    body{
+        background-color: rgb(49, 41, 102);
+        color: lightslategray;
+    
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: 400;      
+        }
+    
+    /* OPTION #3*/
+    
+    body{
+        background-color: rgb(5, 47, 5);
+        color: rgb(159, 241, 159);
+        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        }
+    
+        
+
+    
+
+/* Pulled from light-dark.css here in css file unsure if necessary
+body{
+    background-color: #A5C9CA;
+    color: #395B64;
+  }
+  
+  h1{
+    color: #395B64;
+  }
+  .completed{
+    text-decoration: line-through;
+    color: gray;
+  }
+  .not{
+    text-decoration: underline;
+  }
